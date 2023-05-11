@@ -9,7 +9,7 @@ function Select({ options, setOptions }) {
         <label htmlFor="options">
           <select value={options} onChange={(e) => setOptions(e.target.value)}>
             <option value="">All</option>
-            <option value="Asie">Asie</option>
+            <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>

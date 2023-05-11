@@ -73,8 +73,7 @@ function App() {
     <>
       <Navbar options={options} setOptions={setOptions} />
       <Header />
-      {finalData.length ? finalData.map((el) => el.name) : null}
-      <Body />
+      <Body finalData={finalData} options={options} />
       <Footer />
     </>
   );
