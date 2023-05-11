@@ -56,9 +56,15 @@ function App() {
             : "None",
           languages: currentLanguages,
           googleMap: elFirst.maps.googleMaps,
-          dangerScore: dataFromTravelApiToAdd.dangerScore,
-          dangerUrl: dataFromTravelApiToAdd.dangerUrl,
-          dangerMessage: dataFromTravelApiToAdd.dangerMessage,
+          dangerScore: dataFromTravelApiToAdd.dangerScore
+            ? dataFromTravelApiToAdd.dangerScore
+            : "None",
+          dangerUrl: dataFromTravelApiToAdd.dangerUrl
+            ? dataFromTravelApiToAdd.dangerUrl
+            : "None",
+          dangerMessage: dataFromTravelApiToAdd.dangerMessage
+            ? dataFromTravelApiToAdd.dangerMessage
+            : "None",
         });
       });
       setFinalData(array);
