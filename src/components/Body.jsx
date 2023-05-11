@@ -3,13 +3,13 @@ import "../css/Body.css";
 
 function Body({ finalData, options }) {
   return (
-    <div className="body">
+    <div className="bodyEl">
       <ul className="cardsList">
         {finalData.length
           ? finalData.map((el) =>
               !options || el.region === options ? (
-                <li key={el.id} className="card">
-                  <Card className="card" country={el} />
+                <li className="card" key={el.id}>
+                  <Card country={el} />
                 </li>
               ) : null
             )
