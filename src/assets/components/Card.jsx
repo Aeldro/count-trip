@@ -1,11 +1,8 @@
 import React from "react";
-import "./Card.css"
+import "../css/Card.css";
 
-
-function Card(){
-
-    return 
-
+function Card() {
+  return <></>;
 }
 
-export default Card
+export default Card;

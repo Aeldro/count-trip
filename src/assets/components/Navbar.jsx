@@ -1,18 +1,15 @@
 import React from "react";
 import Logo from "./Logo";
 import Select from "./Select";
-import "./Navbar.css"
+import "../css/Navbar.css";
 
-function Navbar(){
-
-return (
-
+function Navbar() {
+  return (
     <div>
-        <Logo/>
-        <Select/>
+      <Logo />
+      <Select />
     </div>
-)
-
+  );
 }
 
-export default Navbar
+export default Navbar;

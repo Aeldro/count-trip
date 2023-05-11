@@ -1,15 +1,9 @@
 import React from "react";
 import Card from "./Card";
-import "./Body.css"
+import "../css/Body.css";
 
-function Body(){
-
-    return (
-
-       <Card/>
-    )
-
-
+function Body() {
+  return <Card />;
 }
 
-export default Body
+export default Body;

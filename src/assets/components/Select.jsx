@@ -1,11 +1,8 @@
 import React from "react";
-import "./Select.css"
+import "../css/Select.css";
 
-function Select(){
-
-return 
-
-
+function Select() {
+  return <></>;
 }
 
-export default Select
+export default Select;

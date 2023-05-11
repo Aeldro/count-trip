@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./assets/components/Navbar";
+import Header from "./assets/components/Header";
+import Body from "./assets/components/Body";
+import Footer from "./assets/components/Footer";
 
 function App() {
   const [restCountriesFetch, setRestCountriesFetch] = useState([]);
@@ -65,11 +68,15 @@ function App() {
   console.log(travelAdvisoryFetch);
   console.log(finalData);
 
-  return <>{finalData.length ? finalData.map((el) => el.name) : null}
-      <Navbar/>
-      <Header/>
-      <Body/>
-      <Footer/></>;
+  return (
+    <>
+      {finalData.length ? finalData.map((el) => el.name) : null}
+      <Navbar />
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

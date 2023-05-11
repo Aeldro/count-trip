@@ -1,12 +1,8 @@
 import React from "react";
-import "./Logo.css"
+import "../css/Logo.css";
 
-function Logo(){
-
-return 
-
-
-
+function Logo() {
+  return <></>;
 }
 
-export default Logo
+export default Logo;
