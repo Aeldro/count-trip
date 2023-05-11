@@ -1,8 +1,17 @@
-import React from "react";
 import "../css/Header.css";
 
 function Header() {
-  return <></>;
+  return (
+    <div className="banner">
+      <div className="banner_text">
+      
+      <p className="banner_text1"> With Coun'Trip,</p>   
+      <p className="banner_text2"> choose easily </p>
+      <p className="banner_text3">your country !</p> 
+  
+    </div>
+    </div>
+  );
 }
 
 export default Header;
