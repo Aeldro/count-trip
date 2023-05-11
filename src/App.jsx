@@ -10,10 +10,7 @@ function App() {
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [options, setOptions] = useState("");
-  useEffect(() => {
-    console.log(options);
-  }, [options]);
-
+ 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
@@ -45,6 +42,7 @@ function App() {
           ? Object.keys(elFirst.languages).map((clé) => elFirst.languages[clé])
           : ["None"];
         array.push({
+          id: restCountriesFetch.indexOf(elFirst),
           name: elFirst.name.common,
           flag: elFirst.flags.png,
           timezone: elFirst.timezones[1]
@@ -73,12 +71,12 @@ function App() {
 
   return (
     <>
-      <Navbar options={options} setOptions={setOptions} />
-      <Header />
       {finalData.length ? finalData.map((el) => el.name) : null}
+      <Navbar />
+      <Header />
       <Body />
       <Footer />
-    </>
+    </div>
   );
 }
 
