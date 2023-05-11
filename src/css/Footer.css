@@ -1,0 +1,11 @@
+.footer{
+display: flex;
+justify-content: space-between;
+height: 5rem;
+background-color: rgb(23, 156, 217);
+color: #fff;
+font-size: 1.3em;
+padding: 0.5em;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding-right: 1.5em;
+}
