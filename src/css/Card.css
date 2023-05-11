@@ -4,15 +4,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
-  max-width: 90vw;
+  width: 80vw;
   padding: 1rem;
   margin: 0;
   gap: 0.7rem;
+  padding: 1rem;
 }
 
 .flagContainer {
-  width: 20%;
+  width: 50%;
   display: flex;
   margin: 0.8rem auto;
   border: gray 1px solid;
@@ -74,4 +74,20 @@
 .otherContainer p,
 a {
   font-size: 1.2rem;
+}
+
+.fontRed {
+  color: red;
+}
+.fontOrange {
+  color: orange;
+}
+.fontGreen {
+  color: green;
+}
+
+@media screen and (min-width: 768px) {
+  .flagContainer {
+    width: 30%;
+  }
 }

@@ -14,8 +14,26 @@ function Card({ country }) {
         </div>
         <div className="dangerContainer">
           <p className="dangerInfos">Danger informations :</p>
-          <p>Rate : {country.dangerScore}/5</p>
-          <p>{country.dangerMessage}</p>
+          {country.dangerScore ? (
+            <>
+              <p
+                className={
+                  country.dangerScore === 5
+                    ? "fontRed"
+                    : country.dangerScore >= 3
+                    ? "fontOrange"
+                    : "fontGreen"
+                }
+              >
+                Rate : {country.dangerScore}/5
+              </p>
+              <p>{country.dangerMessage}</p>
+
+              <a href={country.dangerUrl}>More informations</a>
+            </>
+          ) : (
+            <p>None</p>
+          )}
         </div>
         <div className="otherContainer">
           <p className="otherInfos">Other informations :</p>
