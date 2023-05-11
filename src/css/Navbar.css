@@ -8,3 +8,5 @@ nav{margin:0 auto;background : linear-gradient(rgba(53, 149, 170, 0.686), white)
 .h3Nav{font-family: 'Roboto', sans-serif;font-size: 1em; margin: 0 2% 2% 2%;}
 
 @media screen and (min-width: 700px) {.NavFormContainer{width: 2%;min-width: 15vw;}}
+
+

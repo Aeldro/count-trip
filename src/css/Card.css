@@ -1,3 +1,75 @@
 .card {
   list-style: none;
+  border: red 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  padding: 1rem;
+  gap: 0.7rem;
+}
+
+.flagContainer {
+  width: 20%;
+  display: flex;
+  margin: 0.8rem auto;
+  border: gray 1px solid;
+}
+
+.infosContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag {
+  width: 100%;
+}
+
+.blockTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.dangerInfos {
+  font-weight: bold;
+}
+
+.otherInfos {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dangerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dangerContainer p {
+  font-size: 1.3rem;
+}
+
+.otherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otherContainer p,
+a {
+  font-size: 1.2rem;
 }

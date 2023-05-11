@@ -1,13 +1,15 @@
-
 :root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
-
-  width: 100%;
+html {
+  width: 100vw;
   margin: 0;
   overflow-x: hidden;
+}
+
+body {
+  margin: 0;
 }
