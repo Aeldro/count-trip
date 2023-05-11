@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "./assets/components/Navbar";
 
 function App() {
   return (
     <>
-      <h1>Coucou</h1>
+      
+      <Navbar/>
+      <Header/>
+      <Body/>
+      <Footer/>
+
+
     </>
   );
 }
