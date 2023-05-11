@@ -20,7 +20,7 @@ function Card({ country }) {
         <div className="otherContainer">
           <p className="otherInfos">Other informations :</p>
           <p>Capital : {country.capital}</p>
-          <p>Languages : {country.languages.map((el) => el)}</p>
+          <p>Languages : {country.languages.map((el) => el + " ")}</p>
           <p>Currency : {country.currency[0]}</p>
           <p>Timezone : {country.timezone}</p>
         </div>
