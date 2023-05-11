@@ -40,7 +40,7 @@ function Card({ country }) {
           <p className="otherInfos">Other informations :</p>
           <p>Capital : {country.capital}</p>
           <p>Languages : {country.languages.map((el) => el + " ")}</p>
-          <p>Currency : {country.currency[0]}</p>
+          <p>Currency : {country.currencyName} {country.currencySymbol ? `(${country.currencySymbol})` : null}</p>
           <p>Timezone : {country.timezone}</p>
         </div>
         <a className="anchor" href={country.googleMap} target="_blank">See on Google Map</a>

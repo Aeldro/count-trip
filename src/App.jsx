@@ -51,8 +51,11 @@ function App() {
           region: elFirst.region,
           coordinates: elFirst.latlng,
           capital: elFirst.capital ? elFirst.capital[0] : "None",
-          currency: elFirst.currencies
-            ? Object.keys(elFirst.currencies)
+          currencyName: elFirst.currencies
+            ? Object.values(elFirst.currencies)[0].name
+            : "None",
+          currencySymbol: elFirst.currencies
+            ? Object.values(elFirst.currencies)[0].symbol
             : "None",
           languages: currentLanguages,
           googleMap: elFirst.maps.googleMaps,
