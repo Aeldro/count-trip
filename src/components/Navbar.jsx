@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 import Logo from "./Logo";
 import Select from "./Select";
 import "../css/Navbar.css";
+import "https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap";
 
 function Navbar({ options, setOptions }) {
   return (
-    <div>
-      <Logo />
+    <nav>
+      <div className="titleContainer">
+        <Logo />
+        <h1 className="NavTitle">Count'trip</h1>
+      </div>
       <Select options={options} setOptions={setOptions} />
-    </div>
+    </nav>
   );
 }
 
