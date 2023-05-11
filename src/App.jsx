@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Navbar from "./assets/components/Navbar";
-import Header from "./assets/components/Header";
-import Body from "./assets/components/Body";
-import Footer from "./assets/components/Footer";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 function App() {
   const [restCountriesFetch, setRestCountriesFetch] = useState([]);
