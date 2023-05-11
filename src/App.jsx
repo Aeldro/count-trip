@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Navbar from "./assets/components/Navbar";
-import Header from "./assets/components/Header";
-import Body from "./assets/components/Body";
-import Footer from "./assets/components/Footer";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 function App() {
   const [restCountriesFetch, setRestCountriesFetch] = useState([]);
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [option, setOption] = useState("");
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -42,6 +43,7 @@ function App() {
           ? Object.keys(elFirst.languages).map((clé) => elFirst.languages[clé])
           : ["None"];
         array.push({
+          id: restCountriesFetch.indexOf(elFirst),
           name: elFirst.name.common,
           flag: elFirst.flags.png,
           timezone: elFirst.timezones[1]
@@ -69,13 +71,12 @@ function App() {
   console.log(finalData);
 
   return (
-    <>
-      {finalData.length ? finalData.map((el) => el.name) : null}
+    <div>
       <Navbar />
       <Header />
-      <Body />
+      <Body finalData={finalData} option={option} />
       <Footer />
-    </>
+    </div>
   );
 }
 

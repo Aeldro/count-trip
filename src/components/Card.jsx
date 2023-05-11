@@ -1,8 +1,12 @@
 import React from "react";
 import "../css/Card.css";
 
-function Card() {
-  return <></>;
+function Card({ country }) {
+  return (
+    <div>
+      <p>{country.name}</p>
+    </div>
+  );
 }
 
 export default Card;
