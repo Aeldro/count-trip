@@ -1,4 +1,12 @@
 .cardsList {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  gap: 1rem;
+  margin: 0;
+}
+
+.bodyEl {
+  display: flex;
+  justify-content: center;
 }
