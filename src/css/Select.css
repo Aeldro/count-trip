@@ -1,0 +1,5 @@
+.SelectForm{width:100%}
+
+.SelectSelection{width:100%;
+max-width: 70%;}
+.SelectSelection:hover{cursor: pointer;}
