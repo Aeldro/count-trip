@@ -10,7 +10,7 @@ function App() {
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [options, setOptions] = useState("");
- 
+
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
@@ -71,12 +71,12 @@ function App() {
 
   return (
     <>
-      {finalData.length ? finalData.map((el) => el.name) : null}
-      <Navbar />
+      <Navbar options={options} setOptions={setOptions} />
       <Header />
+      {finalData.length ? finalData.map((el) => el.name) : null}
       <Body />
       <Footer />
-    </div>
+    </>
   );
 }
 
