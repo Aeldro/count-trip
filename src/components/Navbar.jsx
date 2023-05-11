@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Logo from "./Logo";
 import Select from "./Select";
 import "../css/Navbar.css";
-import "https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap";
 
 function Navbar({ options, setOptions }) {
   return (
