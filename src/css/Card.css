@@ -5,17 +5,17 @@
   flex-direction: column;
   align-items: center;
   width: 80vw;
-  padding: 1rem;
   margin: 0;
   gap: 0.7rem;
-  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #f1f1f1;
+  padding: 0.8rem 0 2rem 0;
 }
 
 .flagContainer {
   width: 50%;
   display: flex;
   margin: 0.8rem auto;
-  border: gray 1px solid;
 }
 
 .infosContainer {
@@ -27,6 +27,8 @@
 
 .flag {
   width: 100%;
+  border-radius: 50%;
+  border: gray 1px solid;
 }
 
 .blockTitle {
@@ -39,19 +41,11 @@
 .card h2 {
   margin: 0;
   font-size: 2rem;
+  font-family: "Patrick Hand", cursive;
 }
 
 .card p {
   margin: 0;
-}
-
-.dangerInfos {
-  font-weight: bold;
-}
-
-.otherInfos {
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .dangerContainer {
@@ -59,16 +53,23 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  gap: 0.7rem;
 }
 
 .dangerContainer p {
   font-size: 1.3rem;
 }
 
+.dangerContainer .dangerInfos {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .otherContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.7rem;
 }
 
 .otherContainer p,
@@ -76,17 +77,48 @@ a {
   font-size: 1.2rem;
 }
 
+.otherContainer .otherInfos {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .fontRed {
   color: red;
 }
 .fontOrange {
-  color: orange;
+  color: rgb(173, 113, 0);
 }
 .fontGreen {
   color: green;
 }
 
+.anchor {
+  background-color: rgba(53, 149, 170);
+  border: 2px solid rgba(53, 149, 170, 0);
+  padding: 0.5rem;
+  border-radius: 5rem;
+  transition: all ease-in-out 0.2s;
+  text-decoration: none;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.anchor:hover {
+  border: 2px solid rgba(53, 149, 170);
+  background-color: white;
+  color: black;
+}
+
+hr {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
+  .card {
+    width: 40vw;
+  }
+
   .flagContainer {
     width: 30%;
   }
