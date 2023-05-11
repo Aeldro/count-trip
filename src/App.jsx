@@ -9,8 +9,7 @@ function App() {
   const [restCountriesFetch, setRestCountriesFetch] = useState([]);
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [option, setOption] = useState("");
+  const [options, setOptions] = useState("");
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -57,9 +56,15 @@ function App() {
             : "None",
           languages: currentLanguages,
           googleMap: elFirst.maps.googleMaps,
-          dangerScore: dataFromTravelApiToAdd.dangerScore,
-          dangerUrl: dataFromTravelApiToAdd.dangerUrl,
-          dangerMessage: dataFromTravelApiToAdd.dangerMessage,
+          dangerScore: dataFromTravelApiToAdd.dangerScore
+            ? dataFromTravelApiToAdd.dangerScore
+            : "None",
+          dangerUrl: dataFromTravelApiToAdd.dangerUrl
+            ? dataFromTravelApiToAdd.dangerUrl
+            : "None",
+          dangerMessage: dataFromTravelApiToAdd.dangerMessage
+            ? dataFromTravelApiToAdd.dangerMessage
+            : "None",
         });
       });
       setFinalData(array);
@@ -71,12 +76,12 @@ function App() {
   console.log(finalData);
 
   return (
-    <div>
-      <Navbar />
+    <>
+      <Navbar options={options} setOptions={setOptions} />
       <Header />
-      <Body finalData={finalData} option={option} />
+      <Body finalData={finalData} options={options} />
       <Footer />
-    </div>
+    </>
   );
 }
 
