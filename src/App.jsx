@@ -58,13 +58,13 @@ function App() {
           googleMap: elFirst.maps.googleMaps,
           dangerScore: dataFromTravelApiToAdd.dangerScore
             ? dataFromTravelApiToAdd.dangerScore
-            : "None",
+            : null,
           dangerUrl: dataFromTravelApiToAdd.dangerUrl
             ? dataFromTravelApiToAdd.dangerUrl
-            : "None",
+            : null,
           dangerMessage: dataFromTravelApiToAdd.dangerMessage
             ? dataFromTravelApiToAdd.dangerMessage
-            : "None",
+            : null,
         });
       });
       setFinalData(array);

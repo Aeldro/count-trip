@@ -5,9 +5,13 @@ import "../css/Select.css";
 function Select({ options, setOptions }) {
   return (
     <>
-      <form>
+      <form className="SelectForm">
         <label htmlFor="options">
-          <select value={options} onChange={(e) => setOptions(e.target.value)}>
+          <select
+            className="SelectSelection"
+            value={options}
+            onChange={(e) => setOptions(e.target.value)}
+          >
             <option value="">All</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
