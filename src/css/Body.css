@@ -10,3 +10,11 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (min-width: 768px) {
+  .cardsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
