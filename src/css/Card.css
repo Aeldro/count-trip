@@ -1,11 +1,13 @@
 .card {
   list-style: none;
-  border: red 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90vw;
+  max-width: 90vw;
   padding: 1rem;
+  margin: 0;
   gap: 0.7rem;
 }
 
