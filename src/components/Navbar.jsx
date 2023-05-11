@@ -7,11 +7,14 @@ import "../css/Navbar.css";
 function Navbar({ options, setOptions }) {
   return (
     <nav>
-      <div className="titleContainer">
+      <div className="NavtitleContainer">
         <Logo />
         <h1 className="NavTitle">Count'trip</h1>
       </div>
-      <Select options={options} setOptions={setOptions} />
+      <div className="NavFormContainer">
+        <h3 className="h3Nav">Select a continent</h3>
+        <Select options={options} setOptions={setOptions} />
+      </div>
     </nav>
   );
 }
