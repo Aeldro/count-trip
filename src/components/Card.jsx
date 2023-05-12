@@ -29,20 +29,21 @@ function Card({ country }) {
               </p>
               <p>{country.dangerMessage}</p>
 
-              <a href={country.dangerUrl}>More informations</a>
+              <a className="anchor" href={country.dangerUrl} target="_blank">More informations</a>
             </>
           ) : (
             <p>None</p>
           )}
         </div>
+        <hr />
         <div className="otherContainer">
           <p className="otherInfos">Other informations :</p>
           <p>Capital : {country.capital}</p>
           <p>Languages : {country.languages.map((el) => el + " ")}</p>
-          <p>Currency : {country.currency[0]}</p>
+          <p>Currency : {country.currencyName} {country.currencySymbol ? `(${country.currencySymbol})` : null}</p>
           <p>Timezone : {country.timezone}</p>
         </div>
-        <a href={country.googleMap}>See on Google Map</a>
+        <a className="anchor" href={country.googleMap} target="_blank">See on Google Map</a>
       </div>
     </>
   );
