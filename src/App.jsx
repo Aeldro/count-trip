@@ -10,6 +10,7 @@ function App() {
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [options, setOptions] = useState("");
+  const [text, setText] = useState("");
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -94,7 +95,7 @@ function App() {
     <>
       <Navbar options={options} setOptions={setOptions} />
       <Header />
-      <Body finalData={finalData} options={options} setOptions={setOptions} />
+      <Body finalData={finalData} options={options} setOptions={setOptions} text={text} setText={setText}/>
       <Footer />
     </>
   );
