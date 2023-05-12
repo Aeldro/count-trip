@@ -7,13 +7,16 @@ import Select from "./Select";
 function Body({ finalData, options, setOptions, text, setText }) {
   return (
     <div className="bodyEl">
-      <div className="FilterContainer">
-        <Search text={text} setText={setText} />
-        <div className="NavFormContainer">
-          <h3 className="h3Nav">Select a continent</h3>
+      <form className="FormContainer">
+        <div className="SelectContainer">
+          <h3 className="h3Filter">Select a continent</h3>
           <Select options={options} setOptions={setOptions} />
         </div>
-      </div>
+        <div className="SearchContainer">
+          <h3 className="h3Filter">Search :</h3>
+          <Search className="SearchBar" text={text} setText={setText} />
+        </div>
+      </form>
       <ul className="cardsList">
         {finalData.length
           ? finalData.map((el) =>

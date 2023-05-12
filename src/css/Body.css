@@ -11,33 +11,52 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.FilterContainer {
-  display: flex;
-  padding: 2%;
-  justify-content: center;
   align-items: center;
 }
 
-.NavFormContainer {
+.FormContainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  border: 0.2px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.141),
+    0 6px 20px 0 rgba(0, 0, 0, 0.103);
+  background-color: #f4f2f29f;
+  margin: 5%;
+}
+
+.SearchContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  padding: 0.5rem;
-  box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.642);
-  min-width: 25vw;
-  gap: 0.3rem;
+  gap: 0.3%;
+  padding-top: 5%;
+  width: 100%;
 }
 
-.h3Nav {
+/*.SearchBar{}*/
+
+.SelectContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 25vw;
+  gap: 0.3%;
+}
+
+.h3Filter {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   margin: 0 2% 2% 2%;
+  text-shadow: 1px 1px 1px rgb(224, 221, 221);
 }
 
 @media screen and (min-width: 768px) {
@@ -46,8 +65,19 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .NavFormContainer {
-    width: 2%;
-    min-width: 15vw;
+
+  .FormContainer {
+    width: 80%;
+    flex-direction: row;
+    padding: 2%;
+    margin: 2%;
+  }
+  .SearchContainer {
+    padding: 0;
+    margin-right: 5%;
+  }
+
+  .SelectContainer {
+    margin-left: 5%;
   }
 }
