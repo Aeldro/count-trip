@@ -134,7 +134,7 @@ const AboutUs = ({ showModal, setShowModal }) => {
                   Rest Countries
                 </a>{" "}
                 for general country information. thanks google map too for
-                location and informations, pictures, reviews for all countries
+                location and informations, pictures, reviews for all countries.
               </p>
             </div>
           </div>
