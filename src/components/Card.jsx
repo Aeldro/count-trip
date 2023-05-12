@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import "../css/Card.css";
 
 function Card({ country }) {
@@ -29,7 +29,9 @@ function Card({ country }) {
               </p>
               <p>{country.dangerMessage}</p>
 
-              <a className="anchor" href={country.dangerUrl} target="_blank">More informations</a>
+              <a className="anchor" href={country.dangerUrl} target="_blank">
+                More informations
+              </a>
             </>
           ) : (
             <p>None</p>
@@ -40,13 +42,26 @@ function Card({ country }) {
           <p className="otherInfos">Other informations :</p>
           <p>Capital : {country.capital}</p>
           <p>Languages : {country.languages.map((el) => el + " ")}</p>
-          <p>Currency : {country.currencyName} {country.currencySymbol ? `(${country.currencySymbol})` : null}</p>
+          <p>
+            Currency : {country.currencyName}{" "}
+            {country.currencySymbol ? `(${country.currencySymbol})` : null}
+          </p>
           <p>Timezone : {country.timezone}</p>
         </div>
-        <a className="anchor" href={country.googleMap} target="_blank">See on Google Map</a>
+        <a className="anchor" href={country.googleMap} target="_blank">
+          See on Google Map
+        </a>
       </div>
     </>
   );
 }
+
+Card.propTypes = {
+  country: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+};
 
 export default Card;

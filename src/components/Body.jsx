@@ -50,6 +50,16 @@ Body.propTypes = {
       PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
     )
   ).isRequired,
+  text: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+  setText: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
 };
 
 export default Body;
