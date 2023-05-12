@@ -11,6 +11,7 @@ function App() {
   const [finalData, setFinalData] = useState([]);
   const [options, setOptions] = useState("");
   const [text, setText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -87,15 +88,48 @@ function App() {
     }
   }, [restCountriesFetch, travelAdvisoryFetch]);
 
-  console.log(restCountriesFetch);
-  console.log(travelAdvisoryFetch);
+  const toggleVisibility = () => {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
   console.log(finalData);
 
   return (
     <>
       <Navbar options={options} setOptions={setOptions} />
       <Header />
-      <Body finalData={finalData} options={options} setOptions={setOptions} text={text} setText={setText}/>
+      <Body
+        finalData={finalData}
+        options={options}
+        setOptions={setOptions}
+        text={text}
+        setText={setText}
+      />
+
+      {isVisible ? (
+        <div
+          className="totopButton"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        ></div>
+      ) : null}
+
       <Footer />
     </>
   );
