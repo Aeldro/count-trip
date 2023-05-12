@@ -10,6 +10,7 @@ function App() {
   const [travelAdvisoryFetch, setTravelAdvisoryFetch] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [options, setOptions] = useState("");
+  const [text, setText] = useState("");
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -27,7 +28,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (restCountriesFetch.length && travelAdvisoryFetch) {
+    if (restCountriesFetch.length && travelAdvisoryFetch.length) {
       const array = [];
       restCountriesFetch.forEach((elFirst) => {
         let dataFromTravelApiToAdd = {};
@@ -70,6 +71,18 @@ function App() {
             : null,
         });
       });
+      array.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // Ignorer la casse
+        const nameB = b.name.toUpperCase(); // Ignorer la casse
+
+        if (nameA < nameB) {
+          return -1; // a vient avant b
+        }
+        if (nameA > nameB) {
+          return 1; // a vient après b
+        }
+        return 0; // a et b sont égaux
+      });
       setFinalData(array);
     }
   }, [restCountriesFetch, travelAdvisoryFetch]);
@@ -82,7 +95,7 @@ function App() {
     <>
       <Navbar options={options} setOptions={setOptions} />
       <Header />
-      <Body finalData={finalData} options={options} />
+      <Body finalData={finalData} options={options} setOptions={setOptions} text={text} setText={setText}/>
       <Footer />
     </>
   );
