@@ -83,7 +83,7 @@ function App() {
     <>
       <Navbar options={options} setOptions={setOptions} />
       <Header />
-      <Body finalData={finalData} options={options} text={text} setText={setText}/>
+      <Body finalData={finalData} options={options} setOptions={setOptions} text={text} setText={setText}/>
       <Footer />
     </>
   );
