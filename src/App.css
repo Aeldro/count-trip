@@ -34,12 +34,18 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
+  z-index: 1;
 }
 
 .totopButton:hover {
   background-image: url("/img/chevron.svg");
   background-color: white;
   border: 2px solid rgba(53, 149, 170);
+}
+
+.overflowHidden {
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media screen and (min-width: 768px) {
