@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (restCountriesFetch.length && travelAdvisoryFetch) {
+    if (restCountriesFetch.length && travelAdvisoryFetch.length) {
       const array = [];
       restCountriesFetch.forEach((elFirst) => {
         let dataFromTravelApiToAdd = {};
@@ -69,6 +69,18 @@ function App() {
             ? dataFromTravelApiToAdd.dangerMessage
             : null,
         });
+      });
+      array.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // Ignorer la casse
+        const nameB = b.name.toUpperCase(); // Ignorer la casse
+
+        if (nameA < nameB) {
+          return -1; // a vient avant b
+        }
+        if (nameA > nameB) {
+          return 1; // a vient après b
+        }
+        return 0; // a et b sont égaux
       });
       setFinalData(array);
     }
