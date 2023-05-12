@@ -1,13 +1,144 @@
-.footer{
-display: flex;
-justify-content: space-between;
-height: 5rem;
-background: linear-gradient( white,rgba(53, 149, 170, 0.686));
-color: #fff;
-font-size: 1.3em;
-padding: 0.5em 0 0 0.5em;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-padding-right: 1.5em;
-margin-top:1.5em;
-text-shadow: 1px 1px 2px black;
+footer{
+
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    background: linear-gradient( white,rgba(53, 149, 170, 0.686));
+    color: #fff;
+    font-size: 1.3em;
+    padding: 0.5em 0 0 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-right: 1.5em;
+    margin-top:1.5em;
+    text-shadow: 1px 1px 2px black;
+    gap : 5%
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.modal {
+      height: 5rem;
+    background: linear-gradient( rgba(53, 149, 170, 0.686),rgb(182, 200, 237));
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    overflow: scroll;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.811);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs_button {
+    background-color: #fff;
+    color: rgb(23, 156, 217);
+    border: 1px solid rgb(23, 156, 217);
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 1%;
+    font-size: 1em;
+    cursor: pointer;
+     width: 50%
+
+}
+footer a{
+    text-decoration: none;
+}
+
+.closeModal_button {
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.profile_description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.profile_description img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgb(23, 156, 217);
+    width:170px;
+    height:170px ;
+}
+
+.navigation button {
+    background-color: #fff;
+    border: 2px solid rgba(53, 149, 170, 0);
+    padding: 0.3rem;
+    border-radius: 5rem;
+    transition: all ease-in-out 0.2s;
+    font-size: 0.8em;
+    color: rgba(53, 149, 170);
+    margin-top: 0.5rem;
+    width: 35%;
+    font-weight: bold
+
+}
+.navigation {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.thanks{
+    padding: 1.5em 0 ;
+
+
+}
+
+p {
+
+    text-align: justify;
+}
+
+@media screen and (min-width: 900px) {
+
+    .profile-container {
+        display: flex;
+    }
+
+   .aboutUs_button{
+    width: 10%;
+   }
+
+   .modal{
+    margin: auto ;
+    width: 60%;
+    height: 90%;
+    overflow: hidden;
+}
+
+
 }
