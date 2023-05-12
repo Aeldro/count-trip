@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/Logo.css";
 
 function Logo() {
