@@ -81,3 +81,11 @@
     margin-left: 5%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .cardsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
