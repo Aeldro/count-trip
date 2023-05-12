@@ -4,8 +4,10 @@ import "../css/Search.css";
 function Search({ text, setText }) {
   console.log(text);
   return (
-    <div className="search">
-      <label htmlFor="search"></label>
+    <form className="search">
+      <label className="h3Filter" htmlFor="search">
+        Search :
+      </label>
       <input
         className="Searchinput"
         type="text"
@@ -13,7 +15,7 @@ function Search({ text, setText }) {
         value={text}
         onChange={(e) => setText(e.target.value.toLowerCase())}
       />
-    </div>
+    </form>
   );
 }
 

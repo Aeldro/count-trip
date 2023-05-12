@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   const [restCountriesFetch, setRestCountriesFetch] = useState([]);
@@ -106,8 +107,12 @@ function App() {
 
   return (
     <div className={`${showModal ? "overflowHidden" : ""}`}>
+      {showModal ? (
+        <AboutUs showModal={showModal} setShowModal={setShowModal} />
+      ) : null}
       <Navbar showModal={showModal} setShowModal={setShowModal} />
       <Header />
+
       <Body
         finalData={finalData}
         options={options}

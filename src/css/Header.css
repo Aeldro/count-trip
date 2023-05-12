@@ -29,7 +29,9 @@
 p span {
   font-size: 1.5em;
   color: white;
-  text-shadow: 5px 1px 10px rgb(23, 156, 217);
+  text-shadow: -2px 0 rgb(23, 156, 217), 0 2px rgb(23, 156, 217),
+    2px 0 rgb(23, 156, 217), 0 -2px rgb(23, 156, 217),
+    5px 1px 10px rgb(23, 156, 217);
 }
 
 @media screen and (mind-width: 768px) {

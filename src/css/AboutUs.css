@@ -1,0 +1,141 @@
+.modal h2 {
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.811);
+  z-index: 2;
+}
+
+.modal {
+  position: absolute;
+  background: linear-gradient(rgba(53, 149, 170), rgb(182, 200, 237));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  height: 95%;
+  overflow: scroll;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: scroll;
+  color: #fff;
+  font-size: 1.3em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 3;
+}
+
+.modalElementsContainer {
+  padding: 2rem;
+}
+
+.modal a {
+  text-decoration: none;
+  color: rgb(23, 156, 217);
+  text-shadow: 1px 1px 10px #fff;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+.closeModal_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  border: 1px solid rgba(53, 149, 170);
+  color: rgba(53, 149, 170);
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 4;
+  background-color: white;
+  position: fixed;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all ease-in-out 0.2s;
+}
+
+.closeModal_button:hover {
+  background-color: rgb(185, 185, 185);
+  color: white;
+  border: 1px solid white;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile_description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile_description img {
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgb(23, 156, 217);
+  width: 170px;
+  height: 170px;
+}
+
+.navigation button {
+  background-color: #fff;
+  border: 2px solid rgba(53, 149, 170, 0);
+  padding: 0.3rem;
+  border-radius: 5rem;
+  transition: all ease-in-out 0.2s;
+  font-size: 0.8em;
+  color: rgba(53, 149, 170);
+  margin-top: 0.5rem;
+  width: 35%;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thanks {
+  padding: 1.5em 0;
+}
+
+.modal p {
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-container {
+    display: flex;
+  }
+
+  .modal {
+    width: 60%;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .closeModal_button {
+    bottom: 10%;
+  }
+}
