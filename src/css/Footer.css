@@ -45,7 +45,7 @@ h2 {
 .aboutUs_button {
     background-color: #fff;
     color: rgb(23, 156, 217);
-    border: 1px solid #0d18eb;
+    border: 1px solid rgb(23, 156, 217);
     border-radius: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 1%;
