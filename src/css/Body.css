@@ -47,15 +47,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-width: 25vw;
   gap: 0.3%;
 }
 
 .h3Filter {
-  font-family: "Roboto", sans-serif;
   font-size: 1em;
   margin: 0 2% 2% 2%;
   text-shadow: 1px 1px 1px rgb(224, 221, 221);
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -73,15 +72,8 @@
   }
   .SearchContainer {
     padding: 0;
-    margin-right: 5%;
   }
 
-  .SelectContainer {
-    margin-left: 5%;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .cardsList {
     flex-direction: row;
     flex-wrap: wrap;
