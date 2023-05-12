@@ -4,8 +4,7 @@ import AboutUs from "./AboutUs"
 import { useState } from "react";
 
 
-function Navbar() {
-  const [showModal, setShowModal] = useState(false);
+function Navbar({showModal, setShowModal}) {
   
   const handleOpenModal = () => {
     setShowModal(true);

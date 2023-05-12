@@ -13,7 +13,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97%;
+  width: 96%;
 }
 
 .NavtitleContainer {
@@ -40,19 +40,15 @@ nav {
 }
 
 .h3Nav {
-  /* font-family: "Roboto", sans-serif; */
   font-size: 1em;
   margin: 0 2% 2% 2%;
 }
-
-
 
 nav h2 {
   text-decoration: underline;
 }
 
 .modal {
-
   background: linear-gradient(rgba(53, 149, 170, 0.686), rgb(182, 200, 237));
   padding: 5%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -66,7 +62,8 @@ nav h2 {
   overflow: scroll;
   color: #fff;
   font-size: 1.3em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 3;
 }
 
 .modal-overlay {
@@ -76,24 +73,28 @@ nav h2 {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.811);
-  z-index: 999;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .aboutUs_button {
-
   background-color: #fff;
   color: rgb(23, 156, 217);
   border: 1px solid rgb(23, 156, 217);
   border-radius: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1em;
   cursor: pointer;
   height: 2.5em;
   width: 10em;
- 
+  transition: all ease-in-out 0.2s;
+}
+
+.aboutUs_button:hover {
+  background-color: rgb(23, 156, 217);
+  color: #fff;
 }
 
 nav a {
@@ -157,7 +158,6 @@ nav a {
 
 .thanks {
   padding: 1.5em 0;
-
 }
 
 .modal p {
@@ -171,7 +171,6 @@ nav a {
 
   .aboutUs_button {
     width: 10%;
-
   }
 
   .modal {
@@ -182,9 +181,7 @@ nav a {
     padding-bottom: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-
   }
-
 
   .NavFormContainer {
     width: 2%;

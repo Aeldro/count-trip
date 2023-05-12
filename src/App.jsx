@@ -12,6 +12,7 @@ function App() {
   const [options, setOptions] = useState("");
   const [text, setText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -89,7 +90,6 @@ function App() {
   }, [restCountriesFetch, travelAdvisoryFetch]);
 
   const toggleVisibility = () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset > 300) {
       setIsVisible(true);
     } else {
@@ -104,11 +104,9 @@ function App() {
     };
   }, []);
 
-  console.log(finalData);
-
   return (
-    <>
-      <Navbar options={options} setOptions={setOptions} />
+    <div className={`${showModal ? "overflowHidden" : ""}`}>
+      <Navbar showModal={showModal} setShowModal={setShowModal} />
       <Header />
       <Body
         finalData={finalData}
@@ -118,7 +116,7 @@ function App() {
         setText={setText}
       />
 
-      {isVisible ? (
+      {isVisible && !showModal ? (
         <div
           className="totopButton"
           onClick={() => {
@@ -131,7 +129,7 @@ function App() {
       ) : null}
 
       <Footer />
-    </>
+    </div>
   );
 }
 
