@@ -16,7 +16,7 @@ footer{
 }
 
 h2 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .modal {
@@ -28,19 +28,26 @@ h2 {
     height: 100%;
     overflow: scroll;
 
+  height: 5rem;
+  background: linear-gradient(rgba(53, 149, 170, 0.686), rgb(182, 200, 237));
+  padding: 2%;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  overflow: scroll;
 }
 
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.811);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.811);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutUs_button {
@@ -72,50 +79,46 @@ footer a{
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .profile_description {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 .profile_description img {
-    border-radius: 50%;
-    box-shadow: 1px 1px 10px rgb(23, 156, 217);
-    width:170px;
-    height:170px ;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgb(23, 156, 217);
+  width: 170px;
+  height: 170px;
 }
 
 .navigation button {
-    background-color: #fff;
-    border: 2px solid rgba(53, 149, 170, 0);
-    padding: 0.3rem;
-    border-radius: 5rem;
-    transition: all ease-in-out 0.2s;
-    font-size: 0.8em;
-    color: rgba(53, 149, 170);
-    margin-top: 0.5rem;
-    width: 35%;
-    font-weight: bold
-
+  background-color: #fff;
+  border: 2px solid rgba(53, 149, 170, 0);
+  padding: 0.3rem;
+  border-radius: 5rem;
+  transition: all ease-in-out 0.2s;
+  font-size: 0.8em;
+  color: rgba(53, 149, 170);
+  margin-top: 0.5rem;
+  width: 35%;
+  font-weight: bold;
 }
 .navigation {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 10px;
-
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .thanks{
@@ -124,23 +127,20 @@ footer a{
 }
 
 p {
-
-    text-align: justify;
+  text-align: justify;
 }
 
+@media screen and (min-width: 768px) {
+  .profile-container {
+    display: flex;
+  }
 
-@media screen and (min-width: 900px) {
-
-    .profile-container {
-        display: flex;
-    }
-
-   .aboutUs_button{
+  .aboutUs_button {
     width: 10%;
-   }
+  }
 
-   .modal{
-    margin: auto ;
+  .modal {
+    margin: auto;
     width: 60%;
     height: 70%;
     padding-top: 1%;

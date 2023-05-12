@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../css/Search.css";
 
 function Search({ text, setText }) {
@@ -15,5 +16,18 @@ function Search({ text, setText }) {
     </div>
   );
 }
+
+Search.propTypes = {
+  text: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+  setText: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+};
 
 export default Search;

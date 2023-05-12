@@ -9,7 +9,7 @@ function Body({ finalData, options, setOptions, text, setText }) {
     <div className="bodyEl">
       <form className="FormContainer">
         <div className="SelectContainer">
-          <h3 className="h3Filter">Select a continent</h3>
+          <h3 className="h3Filter">Select a continent :</h3>
           <Select options={options} setOptions={setOptions} />
         </div>
         <div className="SearchContainer">
@@ -46,6 +46,16 @@ Body.propTypes = {
     )
   ).isRequired,
   setOptions: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+  text: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+    )
+  ).isRequired,
+  setText: PropTypes.arrayOf(
     PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
     )
