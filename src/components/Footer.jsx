@@ -1,13 +1,28 @@
 import "../css/Footer.css";
-import About from "../components/About"
+import AboutUs from "./AboutUs"
+import { useState } from 'react';
+
 
 function Footer() {
-  return <div className="footer">
-<p>&copy; WCS - Hakathon Mai 2023</p>
-<p>About us</p>
-  <About/>
 
-  </div>
+  const [showModal, setShowModal] = useState(false);
+  
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+  return (
+  
+  <footer>
+<p>&copy; WCS - Hakathon Mai 2023</p>
+  <AboutUs 
+  showModal={showModal}
+  setShowModal ={setShowModal}
+  />
+<button className="aboutUs_button" onClick={handleOpenModal}>About Us</button>
+
+  </footer>
+
+  )
 }
 
 export default Footer;

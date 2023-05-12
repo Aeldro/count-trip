@@ -12,12 +12,12 @@ function Select({ options, setOptions }) {
             value={options}
             onChange={(e) => setOptions(e.target.value)}
           >
-            <option value="">All</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Oceania">Oceania</option>
+            <option value="">All (246)</option>
+            <option value="Asia">Asia (50)</option>
+            <option value="Europe">Europe (53)</option>
+            <option value="Africa">Africa (59)</option>
+            <option value="Americas">Americas (57)</option>
+            <option value="Oceania">Oceania (27)</option>
           </select>
         </label>
       </form>

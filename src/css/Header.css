@@ -4,7 +4,6 @@
   height: 300px;
   background-position: 35% 75%;
   background-size: cover;
-  margin-bottom: 1.5rem;
 }
 
 .banner_text {
@@ -26,4 +25,21 @@
 
 .banner_text3 {
   margin-left: 20%;
+}
+p span {
+
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 5px 1px 10px rgb(23, 156, 217);
+
+}
+
+@media screen and (mind-width: 900px){
+  p span {
+
+    color: white;
+    text-shadow: 5px 1px 10px rgb(23, 156, 217);
+  
+  }
+  
 }
