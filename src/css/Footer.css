@@ -2,6 +2,7 @@ footer{
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 5rem;
     background: linear-gradient( white,rgba(53, 149, 170, 0.686));
     color: #fff;
@@ -21,7 +22,7 @@ h2 {
 .modal {
       height: 5rem;
     background: linear-gradient( rgba(53, 149, 170, 0.686),rgb(182, 200, 237));
-    padding: 2%;
+    padding: 5%;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     height: 100%;
@@ -43,19 +44,23 @@ h2 {
 }
 
 .aboutUs_button {
+    
     background-color: #fff;
     color: rgb(23, 156, 217);
     border: 1px solid rgb(23, 156, 217);
     border-radius: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-right: 1%;
+
     font-size: 1em;
     cursor: pointer;
-     width: 50%
-
+    width: 50%;
+    height: 60%;
+    
 }
 footer a{
     text-decoration: none;
+     color: rgb(23, 156, 217);
+     text-shadow:1px 1px 10px #fff;
 }
 
 .closeModal_button {
@@ -63,6 +68,7 @@ footer a{
     margin: 0 auto;
     cursor: pointer;
     margin-top: 2%;
+    border-radius: 20%;
 }
 
 .profile {
@@ -115,13 +121,13 @@ footer a{
 .thanks{
     padding: 1.5em 0 ;
 
-
 }
 
 p {
 
     text-align: justify;
 }
+
 
 @media screen and (min-width: 900px) {
 
@@ -136,9 +142,14 @@ p {
    .modal{
     margin: auto ;
     width: 60%;
-    height: 90%;
-    overflow: hidden;
+    height: 70%;
+    padding-top: 1%;
+    padding-bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
+
 
 
 }
