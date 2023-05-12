@@ -4,14 +4,26 @@
 
 .SelectSelection {
   width: 100%;
-  max-width: 35%;
-  font-family: "Roboto", sans-serif;
+  max-width: fit-content;
+  height: 29px;
+  min-height: 18px;
   background: white;
   box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.642);
-  border-radius: 4px;
+  border-radius: 15px;
   border: 0.5px solid rgb(171, 175, 176);
+  padding-left: 7px;
 }
 
 .SelectSelection:hover {
   cursor: pointer;
+}
+
+.SelectSelection:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .SelectSelection {
+    min-width: 180px;
+  }
 }
