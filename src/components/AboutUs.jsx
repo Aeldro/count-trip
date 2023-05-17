@@ -84,7 +84,7 @@ const AboutUs = ({ showModal, setShowModal }) => {
             with informations about the country of their choice. Among these
             informations, we can find the country's capital, the languages
             spoken, the currency, its time zone, and also its geographical
-            position using Goofle Maps. Additionally, we provide a security
+            position using Google Maps. Additionally, we provide a security
             level indicator. You can find a rating from 1 to 5 indicating the
             level of security in a country (1 being the most secure, represented
             by the color green, and 5 being the least secure, represented by the
