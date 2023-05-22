@@ -98,7 +98,7 @@ const AboutUs = ({ showModal, setShowModal }) => {
             <div className="profile-container">
               {profiles.map(
                 (profile, index) =>
-                  (index === currentProfile || window.innerWidth >= 600) && (
+                  (index === currentProfile || window.innerWidth >= 768) && (
                     <div className="profile_description" key={index}>
                       {profile.avatar}
                       {profile.name}
@@ -108,7 +108,7 @@ const AboutUs = ({ showModal, setShowModal }) => {
             </div>
           </div>
 
-          {window.innerWidth < 600 && (
+          {window.innerWidth < 768 && (
             <div className="navigation">
               <button onClick={handlePrevProfile}>Précédent</button>
               <button onClick={handleNextProfile}>Suivant</button>
